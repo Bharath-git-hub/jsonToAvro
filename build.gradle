@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation 'org.springframework:spring-core:5.3.23'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.3'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.3'
+    implementation 'org.apache.avro:avro:1.11.1'
+
+    // https://mvnrepository.com/artifact/org.kitesdk/kite-data-core
+    implementation 'org.kitesdk:kite-data-core:1.1.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
